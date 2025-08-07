@@ -154,11 +154,8 @@ int main() {
 		break;
 		
 	default:
-		break;
+		printf("Incorrect choice. Aborting...");
 	}
-
-
-   
-
+	
     return 0;
 }
