@@ -14,15 +14,15 @@ body {
 
 }
 
-html { scroll-behavior: smooth;}
+html {scroll-behavior: smooth;}
 
 @keyframes bgmove{
-  from {
-    background-position: 20px -20px;
-  }
-  to {
-    background-position: 60px -60px;
-  }
+	from {
+		background-position: 20px -20px;
+	}
+	to {
+		background-position: 60px -60px;
+	}
 }
 
 pre {
@@ -56,4 +56,31 @@ h2 {
 
 p {
     font-family: "Raleway";
+}
+
+@media only screen and (max-width: 600px) {
+	body {
+		padding: 2%;
+	}
+	pre {
+		width: 90%;
+	}
+
+	h2 {
+		font-family: "Raleway";
+		font-size: 24px;
+		letter-spacing: 1px;
+		font-weight: bold;
+
+		margin-inline: 2%;
+	}
+
+	pre code {
+		font-size: 12px;
+	}
+
+	p {
+		font-size: 14px;
+		margin-inline: 2%;
+	}
 }
