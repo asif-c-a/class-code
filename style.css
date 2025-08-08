@@ -28,7 +28,7 @@ html {scroll-behavior: smooth;}
 pre {
     font-family: "Roboto Mono";
     font-size: 14px;
-    background-color: #e8e8e85e;
+    background-color: #e8e8e83e;
     width: 80%;
     border-radius: 15px;
     padding-left: 25px;
@@ -54,8 +54,10 @@ h2 {
     font-weight: bold;
 }
 
-p {
+p, a {
     font-family: "Raleway";
+	color: black;
+	text-decoration: none;
 }
 
 @media only screen and (max-width: 600px) {

@@ -17,7 +17,15 @@
     </head>
     <body>
         
-        <div class="program">
+        <div class="hyperlinks">
+            <h2>Jump To</h2>
+            <ul>
+                <li><a href="#spm">Sparse Matrix</a></li>
+                <li><a href="#st">Stack</a></li>
+            </ul>
+        </div>
+
+        <div class="program" id="spm">
             <h2>
                 Sparse Matrix
             </h2>
@@ -27,7 +35,7 @@
             </p>
 
             <pre class="code"><code class="language-c">
-#include &lt; stdio.h &gt;
+#include &lt;stdio.h&gt;
 
 void printSparseMat(int spMat[][3], int e)
 {
@@ -192,6 +200,118 @@ int main() {
 
             <p>
                 Result : The program to convert and add 2 sparse matrices or to find the transpose of a sparse matrix is executed and output is verified.
+            </p>
+        </div>
+
+         <div class="program" id="st">
+            <h2>
+                Stack
+            </h2>
+
+            <p>
+                Aim : To write a C program to perform the stack operations push, pop, peek and display.
+            </p>
+
+            <pre class="code"><code class="language-c">
+#include &lt;stdio.h&gt;
+
+int push(int stack[], int top)
+{
+	if(top < 10 - 1)
+	{
+		int e;
+		top++;
+		
+		printf("Input element to be pushed to stack : ");
+		scanf("%d", &e);
+		stack[top] = e;
+	}else{
+		printf("Stack Overflow!\n");
+	}
+
+	return top;
+}
+
+int pop(int stack[], int top)
+{
+	if (top == -1)
+	{
+		printf("Stack Underflow!\n");
+	}else{
+		printf("The element %d is popped.\n", stack[top]);
+		stack[top] = -1;
+		top--;
+	}
+
+	return top;
+}
+
+int peek(int stack[], int top)
+{
+	printf("The top element in stack is %d.\n", stack[top]);
+}
+
+int display(int stack[], int top)
+{
+	printf("The stack is : [ ");
+
+	for (int i = 0; i <= top; i++)
+	{
+		printf("%d ", stack[i]);
+	}
+
+	printf("]\n--------------------\n");
+}
+
+int main()
+{
+	int stack[10], ch, top = -1, flag = 1;
+
+	do
+	{
+		printf("1. Push element\n2. Pop element\n3. Peek stack\n4. Display stack\n5. Exit\n");
+		printf("Select option [1/2/3/4/5] : ");
+		
+		scanf("%d", &ch);
+
+		switch (ch)
+		{
+			case 1:
+				top = push(stack, top);
+				printf("\n--------------------\n");
+				break;
+			
+			case 2:
+				top = pop(stack, top);
+				printf("\n--------------------\n");
+				break;
+			
+			case 3:
+				peek(stack, top);
+				printf("\n--------------------\n");
+				break;
+			
+			case 4:
+				display(stack, top);
+				break;
+			
+			case 5:
+				flag = 0;
+				printf("Exiting...\n");
+				break;
+				
+			default:
+				printf("Incorrect choice.\n");
+		}
+
+	}while(flag);
+
+	return 0;
+}
+            </code></pre>
+
+            <p>
+                Result : The program to perform the stack operations push, pop, peek and display is executed and output is verified.
             </p>
         </div>
     </body>
